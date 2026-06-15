@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8c3f32">
+  <meta name="description" content="写给吴欣霖的生日纪念册">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%238c3f32%22/><text x=%2232%22 y=%2242%22 text-anchor=%22middle%22 font-size=%2232%22 fill=%22%23fbf4e6%22>20</text></svg>">
+  <title>吴欣霖，生日快乐</title>
+  <link rel="stylesheet" href="styles.css?v=20260615-3">
+  <script src="birthday-profile.js?v=20260615-3" defer></script>
+  <script src="app.js?v=20260615-3" defer></script>
+</head>
+<body class="password-locked entrance-active">
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <section class="password-gate" id="passwordGate" aria-labelledby="passwordTitle">
+    <form class="password-card" id="passwordForm">
+      <div class="password-seal" aria-hidden="true">W<br>X<br>L</div>
+      <p class="entrance-overline">A PRIVATE BIRTHDAY BOOK</p>
+      <h1 id="passwordTitle">这是一份<br><em>专属生日礼物</em></h1>
+      <p>请输入口令，打开为吴欣霖准备的生日纪念册。</p>
+      <label for="passwordInput">访问口令</label>
+      <div class="password-field">
+        <input id="passwordInput" name="password" type="password"
+          autocomplete="current-password" required aria-describedby="passwordError"
+          placeholder="输入口令">
+        <button class="password-toggle" id="passwordToggle" type="button" aria-label="显示密码">显示</button>
+      </div>
+      <button class="password-submit" type="submit">
+        验证并打开礼物 <span aria-hidden="true">→</span>
+      </button>
+      <p class="password-error" id="passwordError" role="alert" aria-live="polite"></p>
+      <p class="password-note">PRIVATE · 06 / 20</p>
+    </form>
+  </section>
+
+  <section class="birthday-entrance" id="birthdayEntrance" aria-labelledby="entranceTitle">
+    <div class="entrance-confetti" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="entrance-card">
+      <p class="entrance-overline">A SPECIAL DAY FOR WUXINLIN</p>
+      <h1 id="entranceTitle">吴欣霖，<br><em>生日快乐！</em></h1>
+      <p class="entrance-wish">今天有蛋糕、有礼物，还有一整本为你准备的回忆。</p>
+
+      <div class="celebration-scene" aria-hidden="true">
+        <div class="gift gift-left">
+          <span class="gift-bow"></span>
+          <span class="gift-lid"></span>
+          <span class="gift-box"></span>
+          <span class="gift-ribbon"></span>
+        </div>
+        <div class="cake">
+          <div class="candle candle-one"><span class="flame"></span></div>
+          <div class="candle candle-two"><span class="flame"></span></div>
+          <div class="candle candle-three"><span class="flame"></span></div>
+          <div class="cake-top"></div>
+          <div class="cake-body">
+            <span class="cream cream-one"></span>
+            <span class="cream cream-two"></span>
+            <span class="cream cream-three"></span>
+            <strong>06 · 20</strong>
+          </div>
+          <div class="cake-plate"></div>
+        </div>
+        <div class="gift gift-right">
+          <span class="gift-bow"></span>
+          <span class="gift-lid"></span>
+          <span class="gift-box"></span>
+          <span class="gift-ribbon"></span>
+        </div>
+      </div>
+
+      <button class="enter-button" id="enterButton" type="button">
+        <span>拆开礼物，进入纪念册</span>
+        <b aria-hidden="true">→</b>
+      </button>
+      <p class="entrance-hint">请带着一点期待打开</p>
+    </div>
+  </section>
+
+  <header class="hero" id="top">
+    <nav class="topbar" aria-label="页面导航">
+      <a class="brand" href="#top">WXL · 06/20</a>
+      <div class="nav-links">
+        <a href="#about">关于他</a>
+        <a href="#player">动漫分身</a>
+        <a href="#album">旧相册</a>
+        <a href="#letter">一封信</a>
+      </div>
+      <button class="music-button" id="musicButton" type="button" aria-label="音乐尚未添加">
+        <span class="music-icon" aria-hidden="true">♪</span>
+        <span id="musicLabel">等待一首专属 BGM</span>
+      </button>
+    </nav>
+
+    <div class="hero-layout">
+      <div class="hero-copy hero-ready">
+        <p class="eyebrow">A LITTLE BOOK FOR</p>
+        <h1><span id="heroName">吴欣霖</span><br><em>生日快乐</em></h1>
+        <p class="hero-lead" id="heroMessage">愿新的一岁，照旧有趣，继续优秀。</p>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div><strong id="days">--</strong><span>天</span></div>
+          <div><strong id="hours">--</strong><span>时</span></div>
+          <div><strong id="minutes">--</strong><span>分</span></div>
+          <div><strong id="seconds">--</strong><span>秒</span></div>
+        </div>
+        <p class="countdown-note" id="countdownNote">距离 6 月 20 日</p>
+        <a class="stamp-link" href="#about">翻开这本相册 <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <figure class="hero-photo hero-ready">
+        <div class="photo-tape" aria-hidden="true"></div>
+        <img id="coverPhoto" src="assets/photos/photo-05.webp" alt="吴欣霖的毕业留影">
+        <figcaption>
+          <span>To Wuxinlin</span>
+          <strong>愿你一直走在喜欢的路上</strong>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="hero-number" aria-hidden="true">20</div>
+  </header>
+
+  <main id="main">
+    <section class="about section" id="about">
+      <div class="section-heading reveal">
+        <p class="section-kicker">CHAPTER 01 · 人物小记</p>
+        <h2>关于吴欣霖，<br>几句不完全概括</h2>
+      </div>
+      <div class="traits" id="traits"></div>
+      <blockquote class="big-quote reveal">
+        “有趣不是喧闹，优秀也不必张扬。<br>你刚好两样都有。”
+      </blockquote>
+    </section>
+
+    <section class="anime-profile" id="player">
+      <div class="anime-inner">
+        <div class="anime-copy reveal">
+          <p class="section-kicker">DAILY CHARACTER · 日常分身</p>
+          <p class="player-code">PLAYER 0620 · LOADING...</p>
+          <h2>吴欣霖的<br><em>呆萌玩家档案</em></h2>
+          <p class="anime-intro">
+            不是什么天选男主，只是一个偶尔发呆、拿起掌机就很认真、
+            平常普通但相处起来很有意思的人。
+          </p>
+          <dl class="player-stats">
+            <div><dt>发呆值</dt><dd><span style="--value: 86%"></span><b>A+</b></dd></div>
+            <div><dt>游戏专注</dt><dd><span style="--value: 96%"></span><b>S+</b></dd></div>
+            <div><dt>反应延迟</dt><dd><span style="--value: 72%"></span><b>...</b></dd></div>
+            <div><dt>好友加成</dt><dd><span style="--value: 100%"></span><b>MAX</b></dd></div>
+          </dl>
+          <blockquote class="character-quote">
+            “等一下，我刚才是不是拿反了？”
+          </blockquote>
+        </div>
+
+        <div class="anime-stage reveal">
+          <div class="anime-sun" aria-hidden="true">?</div>
+          <img src="assets/illustrations/wuxinlin-anime-v2.webp"
+            alt="以吴欣霖为灵感设计的原创日常喜剧动漫人物，穿着宽松卫衣，呆呆地看着手中的掌机">
+          <div class="anime-label">
+            <strong>WUXINLIN</strong>
+            <span>Ordinary Mode · Birthday Edition</span>
+          </div>
+          <span class="pixel pixel-one" aria-hidden="true"></span>
+          <span class="pixel pixel-two" aria-hidden="true"></span>
+          <span class="pixel pixel-three" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="album section" id="album">
+      <div class="section-heading reveal">
+        <p class="section-kicker">CHAPTER 02 · 一些被留住的日子</p>
+        <h2>时间往前走，<br>照片替我们记得</h2>
+        <p>毕业、朋友、游戏和那些普通却值得保存的瞬间。</p>
+      </div>
+      <div class="photo-grid" id="photoGrid"></div>
+    </section>
+
+    <section class="memory-strip" aria-label="回忆短句">
+      <div class="marquee">
+        <span>汕头的风 · 游戏的胜负 · 毕业的夏天 · 朋友的合照 · 永远有下一局 · </span>
+        <span aria-hidden="true">汕头的风 · 游戏的胜负 · 毕业的夏天 · 朋友的合照 · 永远有下一局 · </span>
+      </div>
+    </section>
+
+    <section class="letter section" id="letter">
+      <div class="letter-paper reveal">
+        <p class="letter-date">2026 / 06 / 20</p>
+        <p class="salutation">致 吴欣霖：</p>
+        <div id="letterBody"></div>
+        <p class="signature">生日快乐，<br><span>来自一直为你加油的朋友们</span></p>
+        <div class="letter-seal" aria-hidden="true">生<br>日<br>快<br>乐</div>
+      </div>
+      <figure class="letter-photo reveal">
+        <img src="assets/photos/photo-08.webp" alt="朋友们的拍立得合影">
+        <figcaption>向生活比耶，也向未来比耶。</figcaption>
+      </figure>
+    </section>
+
+    <section class="gift-finale" id="finale" aria-labelledby="giftFinaleTitle">
+      <div class="gift-journey" id="giftJourney">
+        <article class="gift-slide gift-intro-slide active" data-gift-slide="intro">
+          <div class="gift-intro-copy reveal">
+            <p class="section-kicker">WAIT A MINUTE...</p>
+            <h2 id="giftFinaleTitle">以为到这里<br>就结束了吗？</h2>
+            <p class="not-yet">还没有哦。</p>
+            <p>还有三份礼物，要一份一份认真拆开。</p>
+            <button class="gift-primary-button" id="startGiftsButton" type="button">
+              去看看第一份礼物 <span aria-hidden="true">→</span>
+            </button>
+            <p class="gift-click-note">也可以直接点击右边的礼物堆</p>
+          </div>
+          <button class="gift-stack" id="giftStackButton" type="button" aria-label="打开第一份礼物">
+            <span class="stack-gift stack-one"></span>
+            <span class="stack-gift stack-two"></span>
+            <span class="stack-gift stack-three"></span>
+            <strong>3</strong>
+            <em>点我拆礼物</em>
+          </button>
+        </article>
+
+        <div id="giftSlides"></div>
+
+        <article class="gift-slide gift-complete-slide" data-gift-slide="complete">
+          <div class="complete-mark" aria-hidden="true">✓</div>
+          <p class="section-kicker">ALL GIFTS DELIVERED</p>
+          <h2>三份礼物，<br>都送到啦。</h2>
+          <p>具体的祝福以后还可以慢慢修改，但想祝你越来越好的心意，现在已经全部打包送达。</p>
+          <p class="complete-wish">吴欣霖，生日快乐。愿快乐不止今天。</p>
+          <a class="gift-primary-button" href="#top">带着礼物回到第一页 ↑</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>MADE WITH MEMORIES · FOR WUXINLIN · 2026</p>
+    <a href="#top">回到第一页 ↑</a>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-close" type="button" aria-label="关闭大图">×</button>
+    <img id="lightboxImage" alt="">
+    <p id="lightboxCaption"></p>
+  </dialog>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+</body>
+</html>
