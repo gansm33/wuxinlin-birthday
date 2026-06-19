@@ -165,14 +165,26 @@ function setupMusic() {
   label.textContent = profile.music.title;
   button.addEventListener("click", async () => {
     if (audio.paused) {
-      await audio.play();
-      button.classList.add("playing");
-      button.setAttribute("aria-label", `暂停音乐：${profile.music.title}`);
+      try {
+        await audio.play();
+        button.classList.add("playing");
+        label.textContent = `正在播放：${profile.music.title}`;
+        button.setAttribute("aria-label", `暂停音乐：${profile.music.title}`);
+      } catch (error) {
+        label.textContent = "点击后仍未播放，请检查浏览器声音设置";
+        button.classList.remove("playing");
+      }
     } else {
       audio.pause();
       button.classList.remove("playing");
+      label.textContent = profile.music.title;
       button.setAttribute("aria-label", `播放音乐：${profile.music.title}`);
     }
+  });
+
+  audio.addEventListener("error", () => {
+    label.textContent = "生日快乐歌加载失败";
+    button.classList.remove("playing");
   });
 }
 

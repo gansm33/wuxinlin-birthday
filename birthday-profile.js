@@ -32,8 +32,8 @@ window.BIRTHDAY_PROFILE = {
     "不说太多宏大的祝愿。只希望你身体健康，心里轻松，想做的事都能慢慢做到；希望你偶尔疲惫时，也总有人记得站在你这边。"
   ],
   music: {
-    src: "",
-    title: "等待一首专属 BGM"
+    src: "assets/music/birthday-song.mp3",
+    title: "生日快乐歌"
   },
   // 三份礼物的祝福初稿。之后确定最终文案时，只需要修改这里。
   gifts: [
