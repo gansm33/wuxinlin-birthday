@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>生日快乐呀，张梦涵</title>
+    <meta name="description" content="一份认真做给朋友的生日网页礼物">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="auth-locked">
+    <div class="ambient" aria-hidden="true">
+      <div class="soft-grid"></div>
+      <div class="ribbon ribbon-one"></div>
+      <div class="ribbon ribbon-two"></div>
+    </div>
+
+    <section class="password-gate" id="passwordGate" aria-labelledby="gateTitle">
+      <div class="gate-sky" aria-hidden="true">
+        <span>✦</span>
+        <span>★</span>
+        <span>✧</span>
+      </div>
+      <form class="gate-card" id="passwordForm" autocomplete="off">
+        <p class="eyebrow">A tiny secret door</p>
+        <h1 id="gateTitle">这是一份给张梦涵的生日礼物</h1>
+        <p class="gate-note">输入密码后，就可以打开这份认真准备的小祝福。</p>
+        <label class="gate-label" for="passwordInput">请输入密码</label>
+        <div class="gate-row">
+          <input id="passwordInput" name="password" type="password" inputmode="text" autocomplete="off" placeholder="生日暗号">
+          <button class="button primary" type="submit">打开礼物</button>
+        </div>
+        <p class="gate-error" id="passwordError" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="opening" aria-hidden="true">
+      <div class="opening-sky" id="openingSky"></div>
+      <div class="opening-text">
+        <span>正在把祝福轻轻送达</span>
+      </div>
+    </div>
+
+    <main class="story-shell" aria-live="polite">
+      <section class="story-scene scene-birthday is-active" data-scene="0" aria-labelledby="heroTitle">
+        <div class="decor-field decor-rich" aria-hidden="true"></div>
+        <div class="scene-inner birthday-layout">
+          <div class="hero-copy">
+            <p class="badge" id="profileBadge">给一位很会发光的 ENFP 女孩</p>
+            <h1 id="heroTitle">生日快乐呀，张梦涵</h1>
+            <p class="hero-subtitle" id="heroSubtitle">愿今天的风、光和所有小小的好运，都偏心一点来到你身边。</p>
+
+            <div class="cake-stage" aria-hidden="true">
+              <div class="cake-sparkles">
+                <span>✦</span>
+                <span>★</span>
+                <span>✧</span>
+              </div>
+              <div class="cake">
+                <div class="candles">
+                  <span class="candle"></span>
+                  <span class="candle candle-pink"></span>
+                  <span class="candle"></span>
+                </div>
+                <div class="cake-layer cake-layer-top"></div>
+                <div class="cake-layer cake-layer-middle"></div>
+                <div class="cake-layer cake-layer-bottom"></div>
+                <div class="cake-cream cream-top"></div>
+                <div class="cake-cream cream-middle"></div>
+                <div class="cake-cream cream-bottom"></div>
+                <div class="cake-plate"></div>
+              </div>
+            </div>
+
+            <div class="scene-actions">
+              <button class="button primary scene-next" type="button" data-next-scene="1">进入人物小宇宙</button>
+            </div>
+          </div>
+
+          <div class="keepsake" aria-label="生日祝福卡">
+            <figure class="portrait-frame" id="heroPhotoFrame">
+              <img id="heroPhoto" src="" alt="张梦涵在海边笑着的照片">
+              <figcaption id="heroPhotoCaption">笑起来很好看的张梦涵</figcaption>
+            </figure>
+            <div class="sunmark" aria-hidden="true"></div>
+            <p class="date" id="birthdayText">7月8日</p>
+            <p class="age" id="ageText">23岁生日快乐</p>
+            <div class="mini-lines" id="openingLines"></div>
+            <div class="countdown" id="countdown" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-scene scene-persona" data-scene="1" aria-labelledby="personaTitle">
+        <div class="decor-field decor-soft" aria-hidden="true"></div>
+        <div class="scene-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Her little universe</p>
+            <h2 id="personaTitle">张梦涵的人物小宇宙</h2>
+            <p class="section-lead">先看她的关键词，再把一些可爱的、明亮的、值得收藏的瞬间放进这一页。</p>
+          </div>
+
+          <div class="keyword-grid reveal" id="keywordGrid"></div>
+
+          <section class="fandom-section reveal" aria-label="追星快乐角落">
+            <div class="fandom-visual" aria-hidden="true">
+              <div class="fan-art">
+                <span class="fan-person person-left"></span>
+                <span class="fan-person person-center"></span>
+                <span class="fan-person person-right"></span>
+                <span class="lightstick"></span>
+              </div>
+              <span class="ticket">TNT</span>
+              <span class="ticket cp">Wen Xuan</span>
+              <span class="cp-heart">♥</span>
+              <span class="spark small"></span>
+              <span class="spark large"></span>
+            </div>
+            <div>
+              <p class="eyebrow">Tiny happy corner</p>
+              <h2>愿热爱永远有回响</h2>
+              <p>喜欢的舞台、喜欢的人、嗑到的快乐，都可以是生活里很珍贵的充电器。愿你在现实里认真长大，也在热爱里一直保留少女心。</p>
+            </div>
+          </section>
+
+          <section class="gallery-section reveal" aria-labelledby="galleryTitle">
+            <div class="section-heading">
+              <p class="eyebrow">Photo keepsakes</p>
+              <h2 id="galleryTitle">她的照片小宇宙</h2>
+            </div>
+            <div class="photo-gallery" id="photoGallery"></div>
+          </section>
+
+          <div class="scene-actions split-actions">
+            <button class="button ghost scene-back" type="button" data-next-scene="0">回到生日蛋糕</button>
+            <button class="button primary scene-next" type="button" data-next-scene="2">打开祝福页面</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-scene scene-blessing" data-scene="2" aria-labelledby="blessingTitle">
+        <div class="decor-field decor-rich" aria-hidden="true"></div>
+        <div class="scene-inner blessing-layout">
+          <section class="letter-section reveal" id="letter">
+            <div class="section-heading">
+              <p class="eyebrow">A little birthday letter</p>
+              <h2 id="blessingTitle">写给今天的你</h2>
+            </div>
+            <article class="letter-paper" id="letterContent"></article>
+          </section>
+
+          <section class="surprise-section reveal" id="surprise">
+            <div class="section-heading">
+              <p class="eyebrow">Tap for a wish</p>
+              <h2>领取一条今日祝福</h2>
+            </div>
+            <div class="wish-box">
+              <p id="wishText">点一下按钮，让祝福随机掉落。</p>
+              <button class="button primary" type="button" id="wishButton">领取祝福</button>
+            </div>
+          </section>
+
+          <section class="finale reveal" aria-label="结尾祝福">
+            <div class="heart-wrap" aria-hidden="true">
+              <span class="heart">♥</span>
+              <span class="heart halo">♥</span>
+            </div>
+            <h2 id="footerLine">愿你永远自由、明亮、勇敢，也永远被爱。</h2>
+            <p id="signature">来自一个认真祝你生日快乐的朋友</p>
+          </section>
+
+          <div class="scene-actions split-actions">
+            <button class="button ghost scene-back" type="button" data-next-scene="1">再看看她的小宇宙</button>
+            <button class="button primary scene-back" type="button" data-next-scene="0">再看一遍生日快乐</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="birthday-profile.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
